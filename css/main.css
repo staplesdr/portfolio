@@ -87,6 +87,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
 html {
   font-size: 16px;
 }
@@ -94,7 +95,6 @@ html {
 body {
   font-size: 1em;
   font-family: 'Open Sans', sans-serif;
-  color: #453E4F;
   text-align: left;
 }
 
@@ -106,23 +106,25 @@ ol {
 }
 
 a {
-  color: #453E4F;
   text-decoration: none;
-  text-transform: uppercase;
+  color: #453E4F;
+  padding: 0 15px;
+  font-weight: 600;
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lora', sans-serif;
   font-weight: 500;
   font-size: 1.875em;
   margin: 0;
 }
 
-h3 {
-  font-family: 'Roboto', sans-serif;
+h3,
+h4 {
+  font-family: 'Lora', sans-serif;
   font-weight: 500;
   font-size: 1.125em;
-  margin: 20px 0;
+  margin: 0;
 }
 
 p {
@@ -130,36 +132,50 @@ p {
   line-height: 1.285;
 }
 
+img {
+  width: 100%;
+}
 
-/***** Header *******/
-
-header {
-  height: 800px;
-  background: url("../img/family.JPG");
-  background-size: cover;
-  background-position: center;
+figure {
   margin: 0;
+}
+
+.content-wrapper {
+  width: 90%;
+  margin: 50px 0;
+}
+
+/***** Base Header - Footer Styles *******/
+
+header, 
+footer {
+  background-color: #FFE8D6;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: row wrap;
 }
 
-header h1 {
-  font-size: 2.25em;
-  font-family: 'Roboto' sans-serif;
-  font-weight: 500;
+header {
+  background: url("../img/family.JPG");
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: baseline;
 }
 
-header h2 {
-  font-size: 3.25em;
-  font-family: 'Lora' serif;
-  font-weight: 600;
+header .content-wrapper {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 header nav {
-  font-size: 1.125em;
-  font-weight: 700;
-  text-transform: uppercase;
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
@@ -167,88 +183,165 @@ header nav {
 }
 
 header nav ul {
-  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 
-header nav ul li {
-  font-size: 1.125em;
-  padding: 0 40px;
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
-header h2 span {
-  color: #2b2b2b;
+#contact p {
+  margin: 0;
 }
+
+#contact .content-wrapper {
+  width: 55%;
+  margin: 50px 0;
+}
+
+#contact .contact {
+  margin-bottom: 50px;
+}
+
+#contact .social-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-social img {
+  max-width: 10%;
+}
+
+.social-icons img {
+  max-width: 70%;
+}
+
+#contact .footer-content { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2.25em;
+  font-family: 'Lora', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Skills */
 
 #skills {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
   background-color: #E8EFF7;
+  padding-bottom: 50px;
 }
 
 #skills h2 {
-  padding-top: 75px;
-  font-weight: 700;
+  font-size: 2.125em;
   text-transform: uppercase;
-  font-size: 2.25em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
 }
 
 #skills h3 {
-  font-weight: 600;
-  font-size: 1.125em;
+  font-size: 1.375em;
+}
+
+.skills-description {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
 }
 
-.skills-list ul {
+.skills-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  align-content: space-around;
-  flex-flow: row wrap;
-  background: #453E4F;
+  background-color: #453E4F;
   color: white;
-  margin: auto;
+  line-height: 1.5em;
+  font-size: 1.2em;
+  width: auto;
+  height: 40px;
+  border-radius: 5px;
 }
+
+/* Projects */
 
 #projects {
-  background-color: #FFE8D6;
-  padding-right: 30px;
   display: flex;
   justify-content: center;
+  flex-flow: row wrap;
+  background-color: #FFE8D6
+}
+
+#projects h2 {
+  margin-bottom: 50px;
+}
+
+#projects article {
+  width: 63%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+#projects .projects-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-flow: row wrap;
 }
 
 #projects h2 {
-  padding-top: 75px;
-  font-weight: 700;
+  font-size: 2.125em;
   text-transform: uppercase;
-  font-size: 2.25em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+  text-align: center;
 }
 
-#projects img {
+.projects-items h3{
+  text-align: center;
+  margin: 0;
+}
+
+.projects-items p{
+  text-align: center;
+  margin: 0;
+}
+
+.projects-items img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+input[type=button] {
   width: 40%;
-  margin: 30px 0;
-}
-
-#projects h3 {
-  font-size: 1.35em;
-  font-weight: 700;
-}
-
-#projects p {
-  font-size: 1.05em;
+  padding: 15px 0;
+  margin-top: 15px;
+  background-color: #453E4F;
+  font-family: 'Lora', sans-serif;
   font-weight: 500;
+  font-size: 1.125em;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
 }
+
+/* About */
 
 #about {
   background-color: #E8EFF7;
@@ -258,40 +351,14 @@ header h2 span {
 }
 
 #about h2 {
-  font-weight: 700;
+  margin-bottom: 40px;
+  line-height: 1;
 }
 
-#about img {
-  width: 32%;
-  margin: 30px 0;
+#about p {
+  margin: 20px 0;
 }
 
-.about-me p {
-  font-size: 1.05 em;
-  font-weight: 500;
-  display: flex;
-  justify-content: flex-end;
-  flex-flow: row wrap;
-  margin: 30px 0;
-}
-
-#contact {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  background-color:#FFE8D6;
-
-}
-
-.contact-info h2 {
-  font-size: 2.25em;
-  font-weight: 700;
-  margin-top: 30px;
-}
-
-.contact-photo img {
-  width: 65%;
-}
 
 
 /* ==========================================================================
@@ -382,9 +449,16 @@ header h2 span {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 768px) {
   /* Style adjustments for viewports that meet the condition */
-}
+
+
+
+
+
+
+
+
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
