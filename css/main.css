@@ -231,7 +231,6 @@ header h1 {
   font-size: 2.25em;
   font-family: 'Lora', sans-serif;
   font-weight: 500;
-  line-height: 1.2;
 }
 
 /* Skills */
@@ -243,7 +242,7 @@ header h1 {
   align-items: center;
   flex-flow: row wrap;
   background-color: #E8EFF7;
-  padding-bottom: 50px;
+  padding-bottom: 5px;
 }
 
 #skills h2 {
@@ -262,17 +261,14 @@ header h1 {
   flex-flow: row wrap;
 }
 
-.skills-list {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.skills-description p {
   background-color: #453E4F;
   color: white;
-  line-height: 1.5em;
-  font-size: 1.2em;
-  width: auto;
-  height: 40px;
-  border-radius: 5px;
+  font-size: 1.125em;
+  border-radius: 10px;
+  margin: 15px 10px;
+  padding: 15px 0;
+  width: 50%;
 }
 
 /* Projects */
@@ -285,7 +281,7 @@ header h1 {
 }
 
 #projects h2 {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #projects article {
@@ -321,12 +317,11 @@ header h1 {
 }
 
 .projects-items img {
-  max-width: 80%;
   height: auto;
   margin-bottom: 40px;
 }
 
-input[type=button] {
+.project-link {
   width: 40%;
   padding: 15px 0;
   margin-top: 15px;
@@ -350,13 +345,21 @@ input[type=button] {
   flex-flow: row wrap;
 }
 
-#about h2 {
+.connect h2 {
   margin-bottom: 40px;
+  font-size: 2.125em;
+  text-transform: uppercase;
   line-height: 1;
+  text-align: center;
 }
 
 #about p {
   margin: 20px 0;
+}
+
+footer .social-icons {
+  width: 12.5em;
+  justify-content: space-between;
 }
 
 
@@ -449,16 +452,147 @@ input[type=button] {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 768px) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width:768px) {
+  /* Tablet styles here */
+
+  /* General styles */
+  .content-wrapper {
+    max-width: 640px;
+    margin: 100px 0;
+  }
+
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
+
+  /* Header */
+  header {
+    justify-content: space-around;
+    padding: 10px 0;
+    min-height: 725px;
+  }
+
+  header .content-wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  header nav {
+    width: 110%;
+  }
+
+  header nav ul {
+    justify-content: space-between;
+  }
+
+  header h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin: 0;
+  }
+
+  header h2 {
+    padding-top: 45px;
+  }
+
+  /* Skills */
+
+  #skills h2 {
+    margin-bottom: 20px;
+  }
+
+  .skills-description {
+    padding: 15px 0;
+    margin: 20px 0;
+  }
+
+  .skills-description p {
+    width: 30%;
+  }
+
+  #projects h2 {
+    margin-bottom: 20px;
+  }
+
+  #projects article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    flex-basis: 50%;
+  }
+
+  }
+  #projects p {
+    width: 70%;
+    text-align: justify;
+  }
+
+  /* About */
+  #about article {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #about article figure {
+  width: 40%;
+  }
+
+  #about article div {
+  width: 58%;
+ }
+
+ /* Footer */
+
+ #contact .footer-content {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ footer .social-icons {
+  width: 25em;
+  justify-content: space-between;
+ }
+}
 
 
+@media only screen and (min-width:1200px) {
+ /*Desktop Styles here */
 
+  header {
+    padding: 15px 0;
+  }
 
+  .content-wrapper {
+    max-width: 1100px;
+  }
 
+  h2 {
+    font-size: 2.25em;
+  }
 
+  h3,
+  h4 {
+    font-size: 1.875em;
+  }
 
+  p {
+    font-size: 1.125em;
+    line-height: 1.333;
+  }
 
+  header h1 {
+    font-size: 3.75em;
+    width: 80%;
+  }
+
+}
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
@@ -472,6 +606,7 @@ input[type=button] {
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
+
 
 @media print {
   *,
