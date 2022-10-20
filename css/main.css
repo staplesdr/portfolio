@@ -345,7 +345,11 @@ header h1 {
   flex-flow: row wrap;
 }
 
-.connect h2 {
+#about p {
+  margin: 20px 0;
+}
+
+#contact h2 {
   margin-bottom: 40px;
   font-size: 2.125em;
   text-transform: uppercase;
@@ -353,11 +357,7 @@ header h1 {
   text-align: center;
 }
 
-#about p {
-  margin: 20px 0;
-}
-
-footer .social-icons {
+#contacts .social-icons {
   width: 12.5em;
   justify-content: space-between;
 }
@@ -471,7 +471,7 @@ footer .social-icons {
     line-height: 1.25;
   }
 
-  /* Header */
+   Header 
   header {
     justify-content: space-around;
     padding: 10px 0;
@@ -501,7 +501,7 @@ footer .social-icons {
     padding-top: 45px;
   }
 
-  /* Skills */
+  /* Skills */ 
 
   #skills h2 {
     margin-bottom: 20px;
@@ -514,10 +514,6 @@ footer .social-icons {
 
   .skills-description p {
     width: 30%;
-  }
-
-  #projects h2 {
-    margin-bottom: 20px;
   }
 
   #projects article {
@@ -534,7 +530,7 @@ footer .social-icons {
     text-align: justify;
   }
 
-  /* About */
+   About 
   #about article {
     display: flex;
     justify-content: space-between;
@@ -548,22 +544,50 @@ footer .social-icons {
   width: 58%;
  }
 
- /* Footer */
+  /* Footer */
+
+ #contact .content-wrapper {
+  width: 65%;
+  margin: 100px 0;
+ }
 
  #contact .footer-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
  }
 
- footer .social-icons {
-  width: 25em;
+ #contact .connect {
+  display: flex;
   justify-content: space-between;
+  margin-bottom: 0;
+  width: 100%;
  }
-}
+
+ #contact img {
+  width: 100%;
+  margin-left: 0;
+ }
+
+ #contact .contact-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 55%;
+  padding-left: 50px;
+ }
+
+ #contact .social-icons p {
+  width: 30%;
+  justify-content: space-around;
+  
+ }
 
 
 @media only screen and (min-width:1200px) {
- /*Desktop Styles here */
+ /* Desktop Styles here */ 
 
   header {
     padding: 15px 0;
@@ -590,9 +614,9 @@ footer .social-icons {
   header h1 {
     font-size: 3.75em;
     width: 80%;
-  }
+  } 
 
-}
+} 
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
